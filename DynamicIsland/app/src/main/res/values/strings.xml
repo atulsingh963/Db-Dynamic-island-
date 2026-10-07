@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dynamic Island</string>
+    <string name="accessibility_service_label">Dynamic Island Overlay</string>
+    <string name="accessibility_service_description">
+        Allows Dynamic Island to draw an iOS-style pill overlay at the top of your screen
+        and respond to notification, media, and system events.
+    </string>
+    <string name="notification_service_label">Dynamic Island Notification Listener</string>
+</resources>

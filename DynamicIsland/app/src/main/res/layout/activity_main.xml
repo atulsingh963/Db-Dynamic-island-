@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- ── Header ──────────────────────────────────────────────────────── -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⬤  Dynamic Island"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configure your island"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- ── Permissions Card ────────────────────────────────────────────── -->
+        <TextView style="@style/SectionHeader" android:text="PERMISSIONS" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/Card">
+
+            <!-- Overlay -->
+            <TextView
+                android:id="@+id/labelOverlay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Draw Over Apps"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/statusOverlay"
+                app:layout_constraintBottom_toTopOf="@+id/btnOverlayPermission" />
+
+            <TextView
+                android:id="@+id/statusOverlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✗ Required"
+                android:textColor="@color/status_error"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/labelOverlay"
+                app:layout_constraintBottom_toBottomOf="@+id/labelOverlay" />
+
+            <Button
+                android:id="@+id/btnOverlayPermission"
+                style="@style/PillButton"
+                android:text="Grant"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelOverlay"
+                android:layout_marginTop="6dp" />
+
+            <!-- Divider -->
+            <View style="@style/Divider"
+                android:id="@+id/divider1"
+                app:layout_constraintTop_toBottomOf="@+id/btnOverlayPermission"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Accessibility -->
+            <TextView
+                android:id="@+id/labelAccessibility"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Accessibility Service"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider1"
+                app:layout_constraintEnd_toStartOf="@+id/statusAccessibility"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/statusAccessibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✗ Enable in Settings"
+                android:textColor="@color/status_error"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/labelAccessibility"
+                app:layout_constraintBottom_toBottomOf="@+id/labelAccessibility" />
+
+            <Button
+                android:id="@+id/btnAccessibilityPermission"
+                style="@style/PillButton"
+                android:text="Open Settings"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelAccessibility"
+                android:layout_marginTop="6dp" />
+
+            <!-- Divider -->
+            <View style="@style/Divider"
+                android:id="@+id/divider2"
+                app:layout_constraintTop_toBottomOf="@+id/btnAccessibilityPermission"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Notification Listener -->
+            <TextView
+                android:id="@+id/labelNotif"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Notification Listener"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider2"
+                app:layout_constraintEnd_toStartOf="@+id/statusNotif"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/statusNotif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✗ Required"
+                android:textColor="@color/status_error"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/labelNotif"
+                app:layout_constraintBottom_toBottomOf="@+id/labelNotif" />
+
+            <Button
+                android:id="@+id/btnNotificationPermission"
+                style="@style/PillButton"
+                android:text="Grant"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelNotif"
+                android:layout_marginTop="6dp" />
+
+            <!-- Divider -->
+            <View style="@style/Divider"
+                android:id="@+id/divider3"
+                app:layout_constraintTop_toBottomOf="@+id/btnNotificationPermission"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Battery Optimisation -->
+            <Button
+                android:id="@+id/btnBatteryOptimization"
+                style="@style/PillButton"
+                android:text="Disable Battery Optimization"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="12dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ── Alignment Card ──────────────────────────────────────────────── -->
+        <TextView style="@style/SectionHeader" android:text="ALIGNMENT"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout style="@style/Card"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/labelX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horizontal offset: 0px"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <SeekBar
+                android:id="@+id/seekbarX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="600"
+                android:progress="300"
+                android:thumbTint="@color/accent"
+                android:progressTint="@color/accent"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/labelY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vertical offset (top): 0px"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp" />
+
+            <SeekBar
+                android:id="@+id/seekbarY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="200"
+                android:progress="0"
+                android:thumbTint="@color/accent"
+                android:progressTint="@color/accent"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnResetPosition"
+                style="@style/PillButton.Secondary"
+                android:text="↺  Reset to Center"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <!-- ── Preview Card ────────────────────────────────────────────────── -->
+        <TextView style="@style/SectionHeader" android:text="PREVIEW STATES"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout style="@style/Card"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap to preview each state on the overlay:"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnPreviewCompact"
+                    style="@style/PillButton.Preview"
+                    android:text="Compact"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp" />
+
+                <Button
+                    android:id="@+id/btnPreviewWaveform"
+                    style="@style/PillButton.Preview"
+                    android:text="Waveform"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btnPreviewExpanded"
+                    style="@style/PillButton.Preview"
+                    android:text="Media Card"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp" />
+
+                <Button
+                    android:id="@+id/btnPreviewBattery"
+                    style="@style/PillButton.Preview"
+                    android:text="Battery"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btnPreviewTimer"
+                    style="@style/PillButton.Preview"
+                    android:text="Timer"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp" />
+
+                <Button
+                    android:id="@+id/btnHide"
+                    style="@style/PillButton.Secondary"
+                    android:text="Hide"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Bottom spacing -->
+        <View android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,261 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.dynamicisland.app.debug"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="31"
+9        android:targetSdkVersion="35" />
+10
+11    <!--
+12    ══════════════════════════════════════════════════════════════════════
+13         PERMISSIONS
+14    ══════════════════════════════════════════════════════════════════════════
+15    -->
+16
+17
+18    <!-- Draw over other apps (overlay) -->
+19    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+19-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:10:5-78
+19-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:10:22-75
+20
+21    <!-- Foreground service (keep background work alive) -->
+22    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+22-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:13:5-77
+22-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:13:22-74
+23    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+23-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:14:5-89
+23-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:14:22-86
+24
+25    <!-- Notifications (intercept & post) -->
+26    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+26-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:17:5-77
+26-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:17:22-74
+27    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+27-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:18:5-81
+27-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:18:22-78
+28
+29    <!-- Battery state -->
+30    <uses-permission android:name="android.permission.BATTERY_STATS" />
+30-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:21:5-22:47
+30-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:21:22-69
+31
+32    <!-- Media session (for the media player module) -->
+33    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+33-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:25:5-26:47
+33-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:25:22-77
+34
+35    <!-- Vibration for haptic feedback -->
+36    <uses-permission android:name="android.permission.VIBRATE" />
+36-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:29:5-66
+36-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:29:22-63
+37
+38    <permission
+38-->[androidx.core:core:1.13.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\c71392cb398a6c93d2af2e5261f1ceb0\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+39        android:name="com.dynamicisland.app.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+39-->[androidx.core:core:1.13.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\c71392cb398a6c93d2af2e5261f1ceb0\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+40        android:protectionLevel="signature" />
+40-->[androidx.core:core:1.13.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\c71392cb398a6c93d2af2e5261f1ceb0\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+41
+42    <uses-permission android:name="com.dynamicisland.app.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+42-->[androidx.core:core:1.13.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\c71392cb398a6c93d2af2e5261f1ceb0\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+42-->[androidx.core:core:1.13.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\c71392cb398a6c93d2af2e5261f1ceb0\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+43    <!--
+44 ══════════════════════════════════════════════════════════════════════
+45         APPLICATION
+46    ══════════════════════════════════════════════════════════════════════════
+47    -->
+48    <application
+48-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:34:5-101:19
+49        android:name="com.dynamicisland.app.DynamicIslandApp"
+49-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:35:9-41
+50        android:allowBackup="false"
+50-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:36:9-36
+51        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+51-->[androidx.core:core:1.13.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\c71392cb398a6c93d2af2e5261f1ceb0\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+52        android:debuggable="true"
+53        android:extractNativeLibs="false"
+54        android:icon="@drawable/ic_island"
+54-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:37:9-43
+55        android:label="@string/app_name"
+55-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:38:9-41
+56        android:roundIcon="@drawable/ic_island"
+56-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:39:9-48
+57        android:supportsRtl="true"
+57-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:40:9-35
+58        android:theme="@style/Theme.DynamicIsland" >
+58-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:41:9-51
+59
+60        <!-- ── MainActivity: alignment configuration UI ───────────────────── -->
+61        <activity
+61-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:45:9-54:20
+62            android:name="com.dynamicisland.app.ui.MainActivity"
+62-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:46:13-44
+63            android:exported="true"
+63-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:47:13-36
+64            android:launchMode="singleTask"
+64-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:49:13-44
+65            android:windowSoftInputMode="adjustResize" >
+65-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:48:13-55
+66            <intent-filter>
+66-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:50:13-53:29
+67                <action android:name="android.intent.action.MAIN" />
+67-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:51:17-69
+67-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:51:25-66
+68
+69                <category android:name="android.intent.category.LAUNCHER" />
+69-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:52:17-77
+69-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:52:27-74
+70            </intent-filter>
+71        </activity>
+72
+73        <!-- ── IslandAccessibilityService ─────────────────────────────────── -->
+74        <service
+74-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:57:9-68:19
+75            android:name="com.dynamicisland.app.service.IslandAccessibilityService"
+75-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:58:13-63
+76            android:exported="true"
+76-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:59:13-36
+77            android:label="@string/accessibility_service_label"
+77-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:60:13-64
+78            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+78-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:61:13-79
+79            <intent-filter>
+79-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:62:13-64:29
+80                <action android:name="android.accessibilityservice.AccessibilityService" />
+80-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:63:17-92
+80-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:63:25-89
+81            </intent-filter>
+82
+83            <meta-data
+83-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:65:13-67:72
+84                android:name="android.accessibilityservice"
+84-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:66:17-60
+85                android:resource="@xml/accessibility_service_config" />
+85-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:67:17-69
+86        </service>
+87
+88        <!-- ── IslandNotificationListenerService ──────────────────────────── -->
+89        <service
+89-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:71:9-79:19
+90            android:name="com.dynamicisland.app.service.IslandNotificationService"
+90-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:72:13-62
+91            android:exported="true"
+91-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:73:13-36
+92            android:label="@string/notification_service_label"
+92-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:74:13-63
+93            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+93-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:75:13-87
+94            <intent-filter>
+94-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:76:13-78:29
+95                <action android:name="android.service.notification.NotificationListenerService" />
+95-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:77:17-99
+95-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:77:25-96
+96            </intent-filter>
+97        </service>
+98
+99        <!-- ── IslandForegroundService ─────────────────────────────────────── -->
+100        <service
+100-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:82:9-89:19
+101            android:name="com.dynamicisland.app.service.IslandForegroundService"
+101-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:83:13-60
+102            android:exported="false"
+102-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:84:13-37
+103            android:foregroundServiceType="specialUse" >
+103-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:85:13-55
+104            <property
+104-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:86:13-88:66
+105                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+105-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:87:17-76
+106                android:value="Dynamic Island overlay process" />
+106-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:88:17-63
+107        </service>
+108
+109        <!-- ── Boot receiver: restart overlay after device reboot ─────────── -->
+110        <receiver
+110-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:92:9-99:20
+111            android:name="com.dynamicisland.app.service.BootReceiver"
+111-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:93:13-49
+112            android:exported="true" >
+112-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:94:13-36
+113            <intent-filter android:priority="999" >
+113-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:95:13-98:29
+113-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:95:28-50
+114                <action android:name="android.intent.action.BOOT_COMPLETED" />
+114-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:96:17-79
+114-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:96:25-76
+115                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+115-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:97:17-84
+115-->D:\Projects\DB\DynamicIsland\app\src\main\AndroidManifest.xml:97:25-81
+116            </intent-filter>
+117        </receiver>
+118
+119        <provider
+119-->[androidx.emoji2:emoji2:1.3.0] C:\Users\atul\.gradle\caches\8.11.1\transforms\854bdc86ce87f10f87ccf4b7cc7687e0\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+120            android:name="androidx.startup.InitializationProvider"
+120-->[androidx.emoji2:emoji2:1.3.0] C:\Users\atul\.gradle\caches\8.11.1\transforms\854bdc86ce87f10f87ccf4b7cc7687e0\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+121            android:authorities="com.dynamicisland.app.debug.androidx-startup"
+121-->[androidx.emoji2:emoji2:1.3.0] C:\Users\atul\.gradle\caches\8.11.1\transforms\854bdc86ce87f10f87ccf4b7cc7687e0\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+122            android:exported="false" >
+122-->[androidx.emoji2:emoji2:1.3.0] C:\Users\atul\.gradle\caches\8.11.1\transforms\854bdc86ce87f10f87ccf4b7cc7687e0\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+123            <meta-data
+123-->[androidx.emoji2:emoji2:1.3.0] C:\Users\atul\.gradle\caches\8.11.1\transforms\854bdc86ce87f10f87ccf4b7cc7687e0\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+124                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+124-->[androidx.emoji2:emoji2:1.3.0] C:\Users\atul\.gradle\caches\8.11.1\transforms\854bdc86ce87f10f87ccf4b7cc7687e0\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+125                android:value="androidx.startup" />
+125-->[androidx.emoji2:emoji2:1.3.0] C:\Users\atul\.gradle\caches\8.11.1\transforms\854bdc86ce87f10f87ccf4b7cc7687e0\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+126            <meta-data
+126-->[androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\atul\.gradle\caches\8.11.1\transforms\b43e1c692a1f544ea66837c1d1365878\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:29:13-31:52
+127                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+127-->[androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\atul\.gradle\caches\8.11.1\transforms\b43e1c692a1f544ea66837c1d1365878\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:30:17-78
+128                android:value="androidx.startup" />
+128-->[androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\atul\.gradle\caches\8.11.1\transforms\b43e1c692a1f544ea66837c1d1365878\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:31:17-49
+129            <meta-data
+129-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+130                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+130-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+131                android:value="androidx.startup" />
+131-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+132        </provider>
+133
+134        <receiver
+134-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+135            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+135-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+136            android:directBootAware="false"
+136-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+137            android:enabled="true"
+137-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+138            android:exported="true"
+138-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+139            android:permission="android.permission.DUMP" >
+139-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+140            <intent-filter>
+140-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+141                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+141-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+141-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+142            </intent-filter>
+143            <intent-filter>
+143-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+144                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+144-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+144-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+145            </intent-filter>
+146            <intent-filter>
+146-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+147                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+147-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+147-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+148            </intent-filter>
+149            <intent-filter>
+149-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+150                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+150-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+150-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\atul\.gradle\caches\8.11.1\transforms\583359ad6d7bc9936462a62f391b870d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+151            </intent-filter>
+152        </receiver>
+153    </application>
+154
+155</manifest>

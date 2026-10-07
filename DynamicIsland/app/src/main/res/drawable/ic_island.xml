@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ic_island.xml  –  Minimal pill-shaped vector used as the app icon
+  and the notification small icon for the foreground service.
+  Fully AMOLED compatible: black fill, white pill.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Black background circle -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M24,24m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0" />
+
+    <!-- White Dynamic Island pill -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M14,20
+                          C14,16.686 16.686,14 20,14
+                          L28,14
+                          C31.314,14 34,16.686 34,20
+                          L34,28
+                          C34,31.314 31.314,34 28,34
+                          L20,34
+                          C16.686,34 14,31.314 14,28
+                          Z" />
+
+    <!-- Camera lens dot (inner black) -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M24,24m-3.5,0a3.5,3.5 0,1 1,7 0a3.5,3.5 0,1 1,-7 0" />
+</vector>

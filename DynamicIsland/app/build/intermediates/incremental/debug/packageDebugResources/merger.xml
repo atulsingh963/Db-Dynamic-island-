@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Projects\DB\DynamicIsland\app\src\main\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Projects\DB\DynamicIsland\app\src\main\res"><file name="bg_card" path="D:\Projects\DB\DynamicIsland\app\src\main\res\drawable\bg_card.xml" qualifiers="" type="drawable"/><file name="ic_island" path="D:\Projects\DB\DynamicIsland\app\src\main\res\drawable\ic_island.xml" qualifiers="" type="drawable"/><file name="activity_main" path="D:\Projects\DB\DynamicIsland\app\src\main\res\layout\activity_main.xml" qualifiers="" type="layout"/><file path="D:\Projects\DB\DynamicIsland\app\src\main\res\values\colors.xml" qualifiers=""><color name="island_black">#000000</color><color name="accent">#1DB954</color><color name="accent_orange">#FF9500</color><color name="accent_blue">#2196F3</color><color name="bg_dark">#0A0A0A</color><color name="surface">#1A1A1A</color><color name="divider">#2A2A2A</color><color name="white">#FFFFFF</color><color name="text_secondary">#888888</color><color name="status_ok">#4CAF50</color><color name="status_error">#FF5252</color><color name="status_warn">#FF9800</color></file><file path="D:\Projects\DB\DynamicIsland\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Dynamic Island</string><string name="accessibility_service_label">Dynamic Island Overlay</string><string name="accessibility_service_description">
+        Allows Dynamic Island to draw an iOS-style pill overlay at the top of your screen
+        and respond to notification, media, and system events.
+    </string><string name="notification_service_label">Dynamic Island Notification Listener</string></file><file path="D:\Projects\DB\DynamicIsland\app\src\main\res\values\themes.xml" qualifiers=""><style name="Theme.DynamicIsland" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryVariant">@color/accent</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style><style name="SectionHeader">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style><style name="Card">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style><style name="PillButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="backgroundTint">@color/accent</item>
+        <item name="cornerRadius">18dp</item>
+    </style><style name="PillButton.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="strokeColor">@color/accent</item>
+        <item name="cornerRadius">18dp</item>
+    </style><style name="PillButton.Preview" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="strokeColor">@color/divider</item>
+        <item name="cornerRadius">20dp</item>
+    </style><style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/divider</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style></file><file name="accessibility_service_config" path="D:\Projects\DB\DynamicIsland\app\src\main\res\xml\accessibility_service_config.xml" qualifiers="" type="xml"/></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Projects\DB\DynamicIsland\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Projects\DB\DynamicIsland\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Projects\DB\DynamicIsland\app\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="D:\Projects\DB\DynamicIsland\app\build\generated\res\resValues\debug"/></dataSet><mergedItems/></merger>

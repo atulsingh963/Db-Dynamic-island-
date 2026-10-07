@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ── App theme (AMOLED dark) ────────────────────────────────────────── -->
+    <style name="Theme.DynamicIsland" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryVariant">@color/accent</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- ── Section header label ───────────────────────────────────────────── -->
+    <style name="SectionHeader">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <!-- ── Card surface ───────────────────────────────────────────────────── -->
+    <style name="Card">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <!-- ── Pill button (primary) ──────────────────────────────────────────── -->
+    <style name="PillButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="backgroundTint">@color/accent</item>
+        <item name="cornerRadius">18dp</item>
+    </style>
+
+    <!-- ── Pill button (secondary / outlined) ─────────────────────────────── -->
+    <style name="PillButton.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="strokeColor">@color/accent</item>
+        <item name="cornerRadius">18dp</item>
+    </style>
+
+    <!-- ── Preview button ─────────────────────────────────────────────────── -->
+    <style name="PillButton.Preview" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="strokeColor">@color/divider</item>
+        <item name="cornerRadius">20dp</item>
+    </style>
+
+    <!-- ── Divider ────────────────────────────────────────────────────────── -->
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/divider</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,22 @@
+#Thu Oct 08 00:49:08 IST 2026
+path.4=12/classes.dex
+path.3=11/classes.dex
+path.2=10/classes.dex
+path.1=0/classes.dex
+path.6=4/classes.dex
+path.5=14/classes.dex
+path.0=classes.dex
+base.4=D\:\\Projects\\DB\\DynamicIsland\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.3=D\:\\Projects\\DB\\DynamicIsland\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+base.2=D\:\\Projects\\DB\\DynamicIsland\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
+base.1=D\:\\Projects\\DB\\DynamicIsland\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=D\:\\Projects\\DB\\DynamicIsland\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+renamed.6=classes7.dex
+renamed.5=classes6.dex
+base.6=D\:\\Projects\\DB\\DynamicIsland\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
+renamed.4=classes5.dex
+base.5=D\:\\Projects\\DB\\DynamicIsland\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex

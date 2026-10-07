@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ══════════════════════════════════════════════════════════════════════
+         PERMISSIONS
+    ══════════════════════════════════════════════════════════════════════════ -->
+
+    <!-- Draw over other apps (overlay) -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- Foreground service (keep background work alive) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <!-- Notifications (intercept & post) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- Battery state -->
+    <uses-permission android:name="android.permission.BATTERY_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- Media session (for the media player module) -->
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- Vibration for haptic feedback -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- ══════════════════════════════════════════════════════════════════════
+         APPLICATION
+    ══════════════════════════════════════════════════════════════════════════ -->
+    <application
+        android:name=".DynamicIslandApp"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_island"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_island"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DynamicIsland"
+        tools:targetApi="35">
+
+        <!-- ── MainActivity: alignment configuration UI ───────────────────── -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ── IslandAccessibilityService ─────────────────────────────────── -->
+        <service
+            android:name=".service.IslandAccessibilityService"
+            android:exported="true"
+            android:label="@string/accessibility_service_label"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+        <!-- ── IslandNotificationListenerService ──────────────────────────── -->
+        <service
+            android:name=".service.IslandNotificationService"
+            android:exported="true"
+            android:label="@string/notification_service_label"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <!-- ── IslandForegroundService ─────────────────────────────────────── -->
+        <service
+            android:name=".service.IslandForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Dynamic Island overlay process" />
+        </service>
+
+        <!-- ── Boot receiver: restart overlay after device reboot ─────────── -->
+        <receiver
+            android:name=".service.BootReceiver"
+            android:exported="true">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand / Island -->
+    <color name="island_black">#000000</color>
+    <color name="accent">#1DB954</color>            <!-- Spotify green -->
+    <color name="accent_orange">#FF9500</color>     <!-- Timer -->
+    <color name="accent_blue">#2196F3</color>       <!-- Reply action -->
+
+    <!-- UI surfaces -->
+    <color name="bg_dark">#0A0A0A</color>
+    <color name="surface">#1A1A1A</color>
+    <color name="divider">#2A2A2A</color>
+
+    <!-- Text -->
+    <color name="white">#FFFFFF</color>
+    <color name="text_secondary">#888888</color>
+
+    <!-- Status indicators -->
+    <color name="status_ok">#4CAF50</color>
+    <color name="status_error">#FF5252</color>
+    <color name="status_warn">#FF9800</color>
+</resources>
